@@ -1,20 +1,7 @@
-
-
-    $(document).ready(function(){
-        
-        $(window).on('load', function(){
-            $('#loading').fadeOut('slow');
-        });
+$(document).ready(function() {
+    setTimeout(function(){
+        $('#loading').fadeOut('slow');
+    }, 5000);
     
-        // Initialize Owl Carousel
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 10,
-            nav: true,
-            lazyLoad: true
-        });
-    
-        // Lazy load images
-        $('.lazy').Lazy();
-    });
+});
+ 
