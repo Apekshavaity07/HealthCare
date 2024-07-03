@@ -10,15 +10,14 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-/*#loading{
+#loading{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #fff no-repeat center;
-    z-index: 99;
-    transition: 2s;
-}*/
-
+    background: #fff url(images/preloader.gif)  center center no-repeat;
+    background-size: 20%;
+    z-index: 100;
+}
 .header{
 
 }
@@ -139,7 +138,7 @@ a.left:hover:before {
     max-width: 150px;
 }
 .container{
-    background: url(images/img10.jpg) center center no-repeat ;
+    background: url(images/img10.jpg) center  center no-repeat ;
     background-size: cover;
     width: 100%;
     height: 480px;
@@ -213,6 +212,7 @@ li a.active-btn::after{
     flex: 1;
 }
 .Overview .col-4 img{
+    box-shadow: 0px 0px 28px -20px #555;;
     height: 100px;
     width: 10px;
     /*padding-left: 10px;*/
@@ -331,7 +331,7 @@ li a.active-btn::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px;
     margin-right: 20px;
 
@@ -378,7 +378,7 @@ li a.active-btn::after{
     font-weight: 500;
 }
 .doctor-team{
-    background-color: #cdd9e4;
+    background-color:  #1a9a89;
     padding: 60px 0px;
 }
 .doctor-team .row{
@@ -403,19 +403,21 @@ li a.active-btn::after{
 
 .dr-cards{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
 }
 .dr-card{
-    background-color: #fff;
+    background-color:#fff;
     padding: 10px;
     margin: 10px;
     box-shadow: 0px 0px 28px -20px #555;
 
 }
 .dr-card img{
-    max-height: 300px;
+    max-height: 400px;
     width: 100%;
     max-width: 350px;
 }
@@ -436,7 +438,7 @@ li a.active-btn::after{
 }
 .Hospitals .dr-card{
     padding: 0px 0px;
-    border: 1px dashed rgb(255, 34, 34);
+   /* border: 1px dashed rgb(255, 34, 34);*/
     border-radius: 8px;
     box-shadow: none;
 }
@@ -709,5 +711,44 @@ a{
     .story-card .card{
         margin: 0;
     }
+}
+owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-item {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.owl-carousel .owl-controls .owl-buttons div {
+    background: #333;
+    color: #FFF;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
