@@ -140,7 +140,7 @@ a.left:hover:before {
     max-width: 150px;
 }
 .container{
-    background: url(images/img10.jpg) center  center no-repeat ;
+    background: url(images/knee.webp) center  center no-repeat ;
     background-size: cover;
     width: 100%;
     height: 480px;
@@ -380,7 +380,7 @@ li a.active-btn::after{
     font-weight: 500;
 }
 .doctor-team{
-    background-color:  #1a9a89;
+    background-color:  #007a5b;
     padding: 60px 0px;
 }
 .doctor-team .row{
@@ -714,43 +714,120 @@ a{
         margin: 0;
     }
 }
-owl-carousel .owl-wrapper-outer {
-    overflow: hidden;
-    position: relative;
+
+.owl-carousel .dr-cards {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px;
+    gap: 45px; 
+}
+
+
+.owl-carousel .dr-card {
+    background-color: #fff; 
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.owl-carousel .dr-card img {
     width: 100%;
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit:contain; 
+    margin: 10px 0; 
 }
 
-.owl-carousel .owl-wrapper {
+
+.owl-carousel .dr-card h4 {
+    font-size: 18px; 
+    margin: 10px 0; 
+    color: #333; 
+}
+
+.owl-carousel .dr-card p {
+    font-size: 16px; 
+    margin: 5px 0; 
+    color: #666; 
+}
+
+.owl-carousel .dr-card small {
+    font-size: 14px;
+    color: #999; 
+}
+
+
+.owl-carousel .dr-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 50%; 
+    color: #fff; 
+    font-size: 26px; 
+    width: 45px; 
+    height: 45px; 
     display: flex;
-    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; 
+    transition: background 0.3s ease; 
 }
 
-.owl-carousel .owl-item {
-    display: flex;
-    flex: 1 0 auto;
+
+.owl-nav button.owl-prev {
+    left: 15px; 
 }
 
-.owl-carousel .owl-controls .owl-buttons div {
-    background: #333;
-    color: #FFF;
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 3px;
+.owl-nav button.owl-next {
+    right: 15px; 
 }
 
-.owl-carousel .owl-controls .owl-buttons .owl-prev {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+
+.owl-nav button.owl-prev:hover,
+.owl-nav button.owl-next:hover {
+    background: rgba(0, 0, 0, 0.8); 
 }
 
-.owl-carousel .owl-controls .owl-buttons .owl-next {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+
+.owl-dots {
+    text-align: center;
+    margin-top: 15px; 
 }
 
+.owl-dots .owl-dot {
+    background: #ccc; 
+    opacity: 1; 
+    transition: background 0.3s ease; 
+}
+
+.owl-dots .owl-dot.active {
+    background: #333; 
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+        width: 35px;
+        height: 35px;
+        font-size: 22px; /* Adjusted font size */
+    }
+
+    .owl-carousel .dr-cards {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+}
+
+@media (min-width: 1000px) {
+    .owl-carousel .dr-cards {
+        padding: 30px;
+    }
+}
