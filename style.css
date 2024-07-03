@@ -440,7 +440,6 @@ li a.active-btn::after{
 }
 .Hospitals .dr-card{
     padding: 0px 0px;
-   /* border: 1px dashed rgb(255, 34, 34);*/
     border-radius: 8px;
     box-shadow: none;
 }
