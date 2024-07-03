@@ -10,15 +10,18 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-#loading{
+/*#loading{
     position: fixed;
     width: 100%;
     height: 100vh;
     background: #fff url(images/preloader.gif)  center center no-repeat;
     background-size: 20%;
     z-index: 100;
-}
-.header{
+    transition: 2s ease-in-out;
+}*/
+
+
+header{
 
 }
 .small-container{
